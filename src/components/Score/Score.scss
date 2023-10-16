@@ -1,0 +1,28 @@
+.scores {
+    column-gap: 30px;
+    display: flex;
+    margin-left: 30px;
+}
+
+@mixin scoreStyles() {
+    h3 {
+        margin: 0;
+    }
+
+    &__number {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+.score {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    @include scoreStyles();
+}
+
+.best-score {
+    @include scoreStyles();
+}

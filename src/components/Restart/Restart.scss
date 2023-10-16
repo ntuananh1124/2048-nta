@@ -1,0 +1,6 @@
+@import "../../scss/mixins";
+
+.restart-btn {
+    @include btn(#1a1a1a,#de99d3);
+    height: fit-content;
+}

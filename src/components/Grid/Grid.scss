@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(251, 216, 222);
+}
+
+.layer-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+}
