@@ -1,4 +1,4 @@
-export const gap = 7;
+export const gap = 5;
 export const blockSize = {
     width: 70,
     height: 70
@@ -12,13 +12,13 @@ export const rowNumber = (num) => {
 }
 
 export const data = [
-    {
-        value: 2,
-        color: "",
-        textColor: "",
-        x: colNumber(1),
-        y: rowNumber(2)
-    },
+    // {
+    //     value: 2,
+    //     color: "",
+    //     textColor: "",
+    //     x: colNumber(1),
+    //     y: rowNumber(2)
+    // },
     {
         value: 64,
         color: "",
@@ -33,6 +33,13 @@ export const data = [
         x: colNumber(4),
         y: rowNumber(3)
     },
+    // {
+    //     value: 2048,
+    //     color: "",
+    //     textColor: "",
+    //     x: colNumber(1),
+    //     y: rowNumber(4)
+    // },
     {
         value: 8,
         color: "",

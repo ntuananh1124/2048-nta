@@ -8,6 +8,14 @@ export default function createNewBlock(state = data, action) {
     // console.log(state);
     switch (action.type) {
         case "CREATE_NEW_BLOCK":
+            let newBlock = {
+                value: 2,
+                color: "",
+                textColor: "",
+                x: 0,
+                y: 0
+            }
+            // tim vi tri con trong:
             newState = [
                 ...newState,
                 {
@@ -24,51 +32,50 @@ export default function createNewBlock(state = data, action) {
                 if (item.x !== 0) {
                     item.x-=(blockSize.width + gap)
                 }
-                else {
-                    // console.log("new array: ",sameValueArray);
-                }
+                console.log(`value: ${item.value}, x: ${item.x}, y: ${item.y}`);
             }
             return newState 
         case "RIGHT":
             for (let i = 0; i < newState.length; i++) {
-                if (newState[i].x !== 231) {
+                if (newState[i].x !== 225) {
                     newState[i].x+=(blockSize.width + gap)
                 }
+                console.log(`value: ${newState[i].value}, x: ${newState[i].x}, y: ${newState[i].y}`);
             }
             return newState 
         case "UP":
-            const finalData = [];
-            let finalResult = [];
+            // const finalData = [];
+            // let finalResult = [];
             for (let i = 0; i < newState.length; i++) {
                 if (newState[i].y !== 0) {
                     newState[i].y-=(blockSize.width + gap)
-                    const result = takeDuplicateElement(newState, newState.length);
+                    // const result = takeDuplicateElement(newState, newState.length);
                     // console.log(result);
-                    finalData.push(...result)
+                    // finalData.push(...result)
                 }
-
+                console.log(`value: ${newState[i].value}, x: ${newState[i].x}, y: ${newState[i].y}`);
             }
-            finalResult = finalData.filter((ele) => finalResult.includes(ele) ? '' : finalResult.push(ele));
-            function removeItemAll(arr, value) {
-                var i = 0;
-                while (i < arr.length) {
-                if (arr[i] === value) {
-                    arr.splice(i, 1);
-                } else {
-                    ++i;
-                }
-                }
-                return arr;
-            }
-            for (let i = 0; i < finalResult.length; i++) {
-                finalResult[i].value*=2;
-            }
-            console.log(finalResult);
-            console.log("up", newState);
+            // finalResult = finalData.filter((ele) => finalResult.includes(ele) ? '' : finalResult.push(ele));
+            // function removeItemAll(arr, value) {
+            //     var i = 0;
+            //     while (i < arr.length) {
+            //     if (arr[i] === value) {
+            //         arr.splice(i, 1);
+            //     } else {
+            //         ++i;
+            //     }
+            //     }
+            //     return arr;
+            // }
+            // for (let i = 0; i < finalResult.length; i++) {
+            //     finalResult[i].value*=2;
+            // }
+            // console.log(finalResult);
+            // console.log("up", newState);
             return newState 
         case "DOWN":
             for (let i = 0; i < newState.length; i++) {
-                if (newState[i].y !== 231) {
+                if (newState[i].y !== 225) {
                     newState[i].y+=(blockSize.width + gap)
                     // for (let j = i + 1; j < newState.length - 1; j++) {
                     //     if (newState[i].value === newState[j].value) {
@@ -77,9 +84,14 @@ export default function createNewBlock(state = data, action) {
                     //     }
                     // }
                 }
-                else {
-                    // console.log("ko p tan cung");
-                    // if ()
+                console.log(`value: ${newState[i].value}, x: ${newState[i].x}, y: ${newState[i].y}`);
+            }
+            console.log(newState);
+            for (let i = 0; i < newState.length - 1; i++) {
+                for (let j = i + 1; j < newState.length; j++) {
+                    if (newState[i].x === newState[j].x && newState[i].y === newState[j].y) {
+                        console.log(`x: ${newState[i].x}, y: ${newState[j].y}`);
+                    }
                 }
             }
             // console.log(newState);

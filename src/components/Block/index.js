@@ -22,11 +22,11 @@ export default function Block() {
                             break;
                             case 8:
                                 blockItem.color = "#F3B27A";
-                                blockItem.textColor = "white"
+                                blockItem.textColor = "white";
                             break;
                             case 16:
                                 blockItem.color = "#F69664";
-                                blockItem.textColor = "white"
+                                blockItem.textColor = "white";
                             break;
                             case 32:
                                 blockItem.color = "#F77C5F";

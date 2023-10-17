@@ -1,7 +1,7 @@
 import Block from "../Block";
 import "./MainGame.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { DownMoved, LeftMoved, RightMoved, UpMoved } from "../../actions/newBlock";
+import { DownMoved, LeftMoved, RightMoved, UpMoved, newBlock } from "../../actions/newBlock";
 // import { randomNumber } from "../../helpers/randomNumber";
 import { gap, blockSize, gridBlock, data } from "../../constant/index";
 import { useEffect } from "react";
@@ -22,7 +22,7 @@ export default function MainGame() {
                 // console.log("new data: ", newData);
                 break;
             case "ArrowDown":
-                // dispatch(newBlock())
+                dispatch(newBlock())
                 dispatch(DownMoved(newData))
                 // console.log(newData);
                 // console.log("Xuong", newData);
