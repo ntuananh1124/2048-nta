@@ -14,27 +14,28 @@ export default function MainGame() {
     // console.log("new data", newData);
 
     const handleMove = (e) => {
+        e.preventDefault();
         // console.log('hell');
         switch (e.key) {
             case "ArrowUp":
-                // dispatch(newBlock())
                 dispatch(UpMoved(newData))
+                dispatch(newBlock())
                 // console.log("new data: ", newData);
                 break;
             case "ArrowDown":
-                dispatch(newBlock())
                 dispatch(DownMoved(newData))
+                dispatch(newBlock())
                 // console.log(newData);
                 // console.log("Xuong", newData);
                 break;
             case "ArrowLeft":
-                // dispatch(newBlock())
                 dispatch(LeftMoved(newData))
+                // dispatch(newBlock())
                 // console.log("Trai", newData);
                 break;
             case "ArrowRight":
-                // dispatch(newBlock())
                 dispatch(RightMoved(newData))
+                // dispatch(newBlock())
                 // console.log("Phai", newData);
                 break;
             default:

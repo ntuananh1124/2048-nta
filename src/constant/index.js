@@ -12,13 +12,13 @@ export const rowNumber = (num) => {
 }
 
 export const data = [
-    // {
-    //     value: 2,
-    //     color: "",
-    //     textColor: "",
-    //     x: colNumber(1),
-    //     y: rowNumber(2)
-    // },
+    {
+        value: 2,
+        color: "",
+        textColor: "",
+        x: colNumber(1),
+        y: rowNumber(2)
+    },
     {
         value: 64,
         color: "",
