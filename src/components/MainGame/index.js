@@ -5,38 +5,35 @@ import { DownMoved, LeftMoved, RightMoved, UpMoved, newBlock } from "../../actio
 // import { randomNumber } from "../../helpers/randomNumber";
 import { gap, blockSize, gridBlock, data } from "../../constant/index";
 import { useEffect } from "react";
+import { takeDuplicate } from "../../helpers/takeDuplicate";
 // import { getUnique } from "../../helpers/getUnique";
 
 export default function MainGame() {
     const dispatch = useDispatch();
     const newData = useSelector(state => state.createNewBlock)
+    // const duplicates = takeDuplicate(newData, newData.length);
+    // console.log(duplicates);
     console.log("original data", data);
     // console.log("new data", newData);
 
     const handleMove = (e) => {
         e.preventDefault();
-        // console.log('hell');
         switch (e.key) {
             case "ArrowUp":
                 dispatch(UpMoved(newData))
                 dispatch(newBlock())
-                // console.log("new data: ", newData);
                 break;
             case "ArrowDown":
                 dispatch(DownMoved(newData))
                 dispatch(newBlock())
-                // console.log(newData);
-                // console.log("Xuong", newData);
                 break;
             case "ArrowLeft":
                 dispatch(LeftMoved(newData))
-                // dispatch(newBlock())
-                // console.log("Trai", newData);
+                dispatch(newBlock())
                 break;
             case "ArrowRight":
                 dispatch(RightMoved(newData))
-                // dispatch(newBlock())
-                // console.log("Phai", newData);
+                dispatch(newBlock())
                 break;
             default:
                 break;

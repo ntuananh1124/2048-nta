@@ -1,9 +1,9 @@
-import { randomNumber } from "../../helpers/randomNumber"
+import { random2Number } from "../../helpers/randomNumber"
 import "./Restart.scss"
 
 export default function Restart() {
     const handleClick = () => {
-        console.log(randomNumber(1,4));
+        random2Number()
     }
     return (
         <>

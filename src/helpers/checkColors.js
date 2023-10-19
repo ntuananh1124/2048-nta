@@ -21,7 +21,7 @@ export const checkColor = (value, backgroundColor, textColor) => {
             textColor = "white";
         break;
         case 64: 
-        backgroundColor = "#F75F3B";
+            backgroundColor = "#F75F3B";
             textColor = "white";
         break;
         case 128: 

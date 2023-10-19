@@ -26,19 +26,12 @@ export const data = [
         x: colNumber(2),
         y: rowNumber(1)
     },
-    {
-        value: 2048,
-        color: "",
-        textColor: "",
-        x: colNumber(4),
-        y: rowNumber(3)
-    },
     // {
     //     value: 2048,
     //     color: "",
     //     textColor: "",
-    //     x: colNumber(1),
-    //     y: rowNumber(4)
+    //     x: colNumber(4),
+    //     y: rowNumber(3)
     // },
     {
         value: 8,

@@ -1,6 +1,7 @@
 // import { checkColor } from "../../helpers/checkColors";
 import { useSelector } from "react-redux";
 import { blockSize } from "../../constant";
+import { checkColor } from "../../helpers/checkColors";
 
 export default function Block() {
     // console.log(data);

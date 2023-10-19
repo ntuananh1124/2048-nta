@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux"
 import "./Score.scss"
 
 export default function Score() {
+    const data = useSelector(state => state.createNewBlock);
+    // console.log(data);
+
     return (
         <>
             <div className="scores">
