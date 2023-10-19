@@ -17,11 +17,13 @@ export default function createNewBlock(state = data, action) {
                 y: rowNumber(randomNumber(1,4)),
             }
             // console.log(`x: ${newBlock.x}, y: ${newBlock.y}`);
-            for (let i = 0; i < newState.length; i++) {
-                if (newState[i].x !== newBlock.x || newState[i].y !== newBlock.y) {
-                    newState.push(newBlock);
-                }
-            }
+            // for (let i = 0; i < newState.length; i++) {
+            //     if (newState[i].x !== newBlock.x) {
+            //         newState.push(newBlock);
+            //     }
+            // }
+            // newState.push(newBlock);
+            console.log("new array:", newState);
             return newState
         case "LEFT":
             // moving
@@ -63,10 +65,10 @@ export default function createNewBlock(state = data, action) {
             // }
             for (let i = 0; i < newState.length; i++) {
                 if (newState[i].y !== colNumber(4)) {
+                    newState[i].y = colNumber(4)
                     for (const item of duplicates) {
                         if (newState[i].value === item.value) {
-                            newState[i].y = colNumber(4)
-                            console.log('di chuyen');
+                            // console.log('di chuyen');
                         }
                         else {
                             newState[i].y = newState[i].y
